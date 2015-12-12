@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+{% if url %}
+<br>
+<div align="center"><iframe src="{{ url }}"
+ allowfullscreen="" frameborder="0" height="369"
+ scrolling="no" width="624"></iframe>
+</div>
+{% else %}
+<br>
+<br>
+<br>
+<br>
+<div align="center"><img src="https://cdn.pbrd.co/images/2O0BrQl2.png" >
+</div>
+{% endif %}
+{% endblock %}
