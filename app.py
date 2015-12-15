@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request
 import requests
+from flask import Flask, render_template, request
+
 from Episodes import *
 
 app = Flask(__name__)
@@ -31,6 +32,8 @@ def seasons(season):
         return render_template('seasons.html', dict=Season6)
     elif season == '7':
         return render_template('seasons.html', dict=Season7)
+    elif season == '8':
+        return render_template('seasons.html', dict=Season8)
 
 
 @app.route("/playback")
