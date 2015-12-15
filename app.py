@@ -34,6 +34,10 @@ def seasons(season):
         return render_template('seasons.html', dict=Season7)
     elif season == '8':
         return render_template('seasons.html', dict=Season8)
+    elif season == '9':
+        return render_template('seasons.html', dict=Season9)
+    elif season == '10':
+        return render_template('seasons.html', dict=Season10)
 
 
 @app.route("/playback")
