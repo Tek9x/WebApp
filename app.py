@@ -146,8 +146,11 @@ def playback():
     if 'cdn.php?ref=' in url:
         print url
         return render_template('video.html', url=url)
+    elif 'view.php?ref=' in url:
+        return render_template('video.html', url=url)
     else:
         return render_template('video.html', url='')
+
 
 
 @app.route('/video_download')
