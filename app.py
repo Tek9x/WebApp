@@ -12,10 +12,9 @@ def main():
     root_url = 'http://www.randomsimpsonsquote.com'
     response = requests.get(root_url)
     soup = bs4.BeautifulSoup(response.text,'lxml')
-    character = soup.select('#main > img')[0]['src']
-    print character
+    #character = soup.select('#main > img')[0]['src']
     quote = soup.select('#main > blockquote')[0]
-    return render_template('index.html', quote=quote, character=character)
+    return render_template('index.html', quote=quote)
 
 
 @app.route("/seasons/<season>")
