@@ -53,6 +53,91 @@ def seasons(season):
         with open('static/data/Season_10.json') as f:
            db = json.load(f)
         return render_template('seasons.html', dict=db['Episodes'])
+    elif season == '11':
+        with open('static/data/Season_11.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
+    elif season == '12':
+        with open('static/data/Season_12.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
+    elif season == '13':
+        with open('static/data/Season_13.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
+    elif season == '14':
+        with open('static/data/Season_14.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
+    elif season == '15':
+        with open('static/data/Season_15.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
+    elif season == '16':
+        with open('static/data/Season_16.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
+    elif season == '17':
+        with open('static/data/Season_17.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
+    elif season == '18':
+        with open('static/data/Season_18.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
+    elif season == '19':
+        with open('static/data/Season_19.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
+    elif season == '20':
+        with open('static/data/Season_20.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
+    elif season == '21':
+        with open('static/data/Season_21.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
+    elif season == '22':
+        with open('static/data/Season_22.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
+    elif season == '23':
+        with open('static/data/Season_23.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
+    elif season == '24':
+        with open('static/data/Season_24.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
+    elif season == '25':
+        with open('static/data/Season_25.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
+    elif season == '26':
+        with open('static/data/Season_26.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
+    elif season == '27':
+        with open('static/data/Season_27.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @app.route("/playback")
