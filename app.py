@@ -1,7 +1,7 @@
+import json
+
 import requests
 from flask import Flask, render_template, request
-
-from Episodes import *
 
 app = Flask(__name__)
 
@@ -11,33 +11,48 @@ def main():
     return render_template('index.html')
 
 
-@app.route("/tabletest")
-def table():
-    return render_template('tabletest.html', dict=Season3)
-
-
 @app.route("/seasons/<season>")
 def seasons(season):
     if season == '1':
-        return render_template('seasons.html', dict=Season1)
+        with open('static/data/Season_1.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
     elif season == '2':
-        return render_template('seasons.html', dict=Season2)
+        with open('static/data/Season_2.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
     elif season == '3':
-        return render_template('seasons.html', dict=Season3)
+        with open('static/data/Season_3.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
     elif season == '4':
-        return render_template('seasons.html', dict=Season4)
+        with open('static/data/Season_4.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
     elif season == '5':
-        return render_template('seasons.html', dict=Season5)
+        with open('static/data/Season_5.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
     elif season == '6':
-        return render_template('seasons.html', dict=Season6)
+        with open('static/data/Season_6.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
     elif season == '7':
-        return render_template('seasons.html', dict=Season7)
+        with open('static/data/Season_7.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
     elif season == '8':
-        return render_template('seasons.html', dict=Season8)
+        with open('static/data/Season_8.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
     elif season == '9':
-        return render_template('seasons.html', dict=Season9)
+        with open('static/data/Season_9.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
     elif season == '10':
-        return render_template('seasons.html', dict=Season10)
+        with open('static/data/Season_10.json') as f:
+           db = json.load(f)
+        return render_template('seasons.html', dict=db['Episodes'])
 
 
 @app.route("/playback")
