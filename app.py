@@ -1,5 +1,6 @@
 import json
 
+import bs4
 import requests
 from flask import Flask, render_template, request
 
@@ -8,7 +9,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    return render_template('index.html')
+    root_url = 'http://www.randomsimpsonsquote.com'
+    response = requests.get(root_url)
+    soup = bs4.BeautifulSoup(response.text,'lxml')
+    pie = soup.select('#main > blockquote')[0]
+    return render_template('index.html', pie=pie)
 
 
 @app.route("/seasons/<season>")
@@ -121,24 +126,6 @@ def seasons(season):
         with open('static/data/Season_27.json') as f:
            db = json.load(f)
         return render_template('seasons.html', dict=db['Episodes'])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @app.route("/playback")
 def playback():
